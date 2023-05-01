@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "1ee72f9a-243f-46c5-b8b3-dc8a9bc415d8",
+		"name": "stc_fileSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5670698"
+	},
+	"item": [
+		{
+			"name": "save item space",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemName\": \"stc-assessments\",\r\n    \"itemType\": \"SPACE\",\r\n    \"permissionGroup\": {\r\n        \"id\": 1,\r\n        \"groupName\":\"admin\"\r\n    },\r\n    \"user_email\":\"mohamed.ahmed64@gmail.com\",\r\n    \"parentId\":null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/fileSystem/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"fileSystem",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save item folder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"itemName\":\"backend\",\r\n \"permissionGroup\":{\r\n     \"id\":1,\r\n     \"groupName\":\"admin\"\r\n },\r\n \"itemType\":\"FOLDER\",\r\n \"parentId\":1,\r\n \"user_email\":\"mostafa.mohamed.ahmed94@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save item file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"itemName\":\"assisment.pdf\",\r\n \"permissionGroup\":{\r\n     \"id\":1,\r\n     \"groupName\":\"admin\"\r\n },\r\n \"itemType\":\"FILE\",\r\n \"parentId\":2,\r\n \"user_email\":\"mostafa.mohamed.ahmed94@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fileSystem/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fileSystem",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "downloadFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"email\":\"mohamed.ahmed64@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/fileSystem/file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"fileSystem",
+						"file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFieMetaData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/permission-group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"permission-group"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
